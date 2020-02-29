@@ -8,19 +8,12 @@
             <h1><a href="http:/archi-tetto.ru">Archi-tetto</a></h1>
         </div>
 
+    {% for post in posts %}
         <div>
-            <br>
-            <h2><a href="http:/archi-tetto.ru">My first post</a></h2>
-            <p>The context of the blog</p>
-            <p>published: 29.02.2020, 22:14</p>
+            <p>published: {{ post.publish}}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.body|linebreaksbr }}</p>
         </div>
-
-        <div>
-            <br>
-
-            <h2><a href="http:/archi-tetto.ru">My second post</a></h2>
-            <p>The context of the second note</p>
-            <p>published: 29.02.2020, 22:16</p>
-        </div>
+    {% endfor %}
     </body>
 </html>
